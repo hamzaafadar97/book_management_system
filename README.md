@@ -1,11 +1,11 @@
-Documentation for Book Management System,
-Laravel Backend
+## Documentation for Book Management System,
+## Laravel Backend
 Overview
 The backend system is built using Laravel and provides authentication and book management functionalities.
 The authentication is done using Laravel Sanctum, and the application structure is based on the MVC pattern.
 
-1. Authentication
-1.1. AuthController.php
+## 1. Authentication
+## 1.1. AuthController.php
 
 Register Function: Handles user registration by validating the input data (name, email, password).
 If successful, a new user is created and a token is generated for them.
