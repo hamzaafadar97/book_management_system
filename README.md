@@ -15,17 +15,17 @@ which should be used for subsequent API calls that require authentication.
 
 Logout Function: Revokes the currently authenticated user's token.
 
-1.2. Models/User.php
+## 1.2. Models/User.php
 
 This model represents a user in the system.
 It uses the HasApiTokens trait from Laravel Sanctum to handle token generation.
 
-1.3. config/auth.php
+## 1.3. config/auth.php
 
 set up to use Sanctum for the API guard.
 
-2. Book Management
-2.1. BookController.php
+## 2. Book Management
+## 2.1. BookController.php
 
 Index Function: Returns a paginated list of books.
 Store Function: Creates a new book after validating input data.
@@ -33,16 +33,16 @@ Show Function: Returns details of a specified book.
 Update Function: Updates the details of a specific book after validating the data.
 Destroy Function: Deletes a specified book from storage.
 
-2.2. Models/Book.php
+## 2.2. Models/Book.php
 
 This model represents a book in the system.
 
-2.3. database/migrations/2023_08_13_211638_create_books_table.php
+## 2.3. database/migrations/2023_08_13_211638_create_books_table.php
 
 Migration for creating the books table.
 Columns include id, title, author, publication_date, description, created_at, and updated_at.
 
-2.4. routes/api.php
+## 2.4. routes/api.php
 
 Authentication endpoints: /login and /register.
 Book-related routes: These are protected by the auth:sanctum middleware to ensure that only authenticated users can access them.
@@ -50,24 +50,24 @@ These routes are defined using the apiResource method which sets up standard CRU
 
 Frontend Documentation
 
-1. Components Overview
-1.1. Book.vue
+## 1. Components Overview
+## 1.1. Book.vue
 
 Handles the main functionality including adding, editing, deleting, and listing books.
 
-1.2. BookValidation.vue
+## 1.2. BookValidation.vue
 
 Handles the form validation for the book inputs and emits the validation result to its parent.
 
-1.3. Login.vue
+## 1.3. Login.vue
 
 Manages the user login functionality.
 
-1.4. Toast.vue
+## 1.4. Toast.vue
 
 Displays a temporary notification to the user.
 
-2. Book.vue Component
+## 2. Book.vue Component
 Methods:
 
 logout(): Logs out the user by removing the authentication token and reloading the page.
@@ -87,7 +87,7 @@ showEditForm(book): Prepares the editingBook object for editing.
 updateBook(): Sends a request to update an existing book.
 deleteBook(book): Sends a request to delete a book.
 
-3. BookValidation.vue Component
+## 3. BookValidation.vue Component
 Properties:
 
 book: Accepts a book object for validation.
@@ -97,7 +97,7 @@ Methods:
 validate(): Validates the book's properties.
 clearErrors(): Clears the validation errors.
 
-4. Login.vue Component
+## 4. Login.vue Component
 Properties:
 
 credentials: Contains the user's email and password for login.
@@ -106,7 +106,7 @@ Methods:
 
 login(): Sends a request to the server to log in the user.
 
-5. Toast.vue Component
+## 5. Toast.vue Component
 Displays a notification based on the given message and type.
 
 Properties:
